@@ -14,7 +14,6 @@ import java.util.List;
 @Repository
 public interface FactureRepository extends JpaRepository<Facture, Long> {
 
-	
 	@Query("SELECT f FROM Facture f where f.fournisseur=:fournisseur and f.archivee=false")
 	public List<Facture> getFactureByFournisseur(@Param("fournisseur") Fournisseur fournisseur);
 
